@@ -6,23 +6,23 @@ const MOBILE_BODY_FONT = '14.5px "Helvetica Neue", Helvetica, Arial, sans-serif'
 const MOBILE_BODY_LINE_HEIGHT = 22
 
 const LEFT_COPY = `
-Some marks feel as if they were drawn to live in the margin. They do not interrupt the reading so much as redirect it, creating a second current alongside the text. What begins as a plain column turns into a route with memory: a turn inward here, a pocket of air there, a sentence held a little longer because the page suddenly narrows and asks for another rhythm.
+You can often see the future first in San Francisco. The conversation changes before the institutions do. One year people are still speaking cautiously about large training runs; the next year the working assumptions have moved to ten-billion-dollar clusters, then to a hundred billion, and then beyond that again. Each planning cycle adds another zero. What sounded extravagant six months ago becomes the conservative baseline for the next round of internal discussion.
 
-That is the appeal of contouring by hand. The layout is still disciplined, still typographic, but it stops pretending every paragraph must occupy the same indifferent rectangle. A logo, a silhouette, a small interruption in the field: these become reasons for the prose to bend and recover. The reader feels the shape without needing to think about geometry at all.
+From the outside, this can sound like hype. From the inside, it looks more like convergence. Labs want more compute because compute still buys capability. Governments are waking up because capability is starting to look strategic. Capital keeps arriving because the prize is no longer framed as another software category but as leverage over the rest of the economy. These forces do not line up perfectly, but they do push in the same direction.
 `.trim().replace(/\s+/gu, ' ') + ' ' + `
-The result should not look fussy. Tiny jagged turns make the eye nervous, so the line wants broader gestures and longer sweeps, more dune than puzzle piece. The white space has to feel intentional. It should seem as if the copy always meant to pass beside the emblem, as if the emblem simply revealed a latent curve already present inside the paragraph.
+If that trajectory holds, the decisive variable is not a single model release. It is industrialization: power, chips, datacenters, supply chains, teams willing to spend enormous amounts of money because they think the next system over the horizon will repay the cost many times over. The question stops being whether frontier systems will improve and starts becoming how quickly the surrounding world can absorb what the labs are already trying to build.
 
-And when the window shifts, the arrangement should answer with another poised state, not a frantic animation. The shape stays itself; the text discovers another way around it. That is the kind of page we are after: calm, explicit, and fully owned in userland.
+That is what makes the next decade feel strange. Progress looks both incremental and discontinuous at the same time: one more scaling law paper, one more procurement round, one more cluster plan, and then suddenly a threshold is crossed and the surrounding institutions realize they were preparing for a different world.
 `.trim().replace(/\s+/gu, ' ')
 
 const RIGHT_COPY = `
-A second column changes the feeling again. The eye can shuttle across the gutter, compare two contours, notice how one symbol opens upward while another settles into the lower edge of the page. The composition becomes less like a block of text and more like a spread: not decorative exactly, but arranged with enough confidence that reading and looking begin to support one another.
+The practical implication is not that every forecasted timeline will arrive on schedule. It is that the frontier is now expensive enough, concentrated enough, and geopolitically entangled enough that we should think about it as infrastructure. Training runs, chip allocations, grid capacity, export controls, and security posture begin to matter in the same sentence. Once that happens, the old habit of treating AI progress as a purely academic curve starts to break down.
 
-This is also why the details matter. If the exclusion zone is too timid, the lines scrape the logo and the whole effect collapses. If the gap between columns is too generous, the page loses tension. If the body type is too large, the prose feels crowded before the contour has a chance to breathe. Small corrections change the page more than extra ornament ever could.
+The people closest to this transition do not seem especially relaxed by it. Their confidence that systems will keep improving is often matched by uncertainty about who will govern the deployment environment, how much slack exists in the supply chain, and whether political systems are capable of responding at the speed that technical systems and capital markets are currently moving.
 `.trim().replace(/\s+/gu, ' ') + ' ' + `
-So this little exercise is deliberately spare: one headline, two symbols, two streams of text, and enough room for the layout algorithm to show its hand. No fake chrome, no surrounding explanation, no scrolling tricks to distract from the basic question. Can the page hold its shape? Can the prose wrap beautifully? Can the composition feel authored rather than merely computed?
+So the point of situational awareness is not prediction as performance. It is to notice the shape of the field while it is still possible to act. If compute, talent, state interest, and model capability are all compounding together, then the relevant question is not whether the curve is real in the abstract. The relevant question is what institutions, norms, and technical practices have to exist before that curve becomes impossible to manage gracefully.
 
-If the answer is yes, then the technical story starts to become a visual one. We stop talking only about line counts and benchmarks and begin talking about spreads, anchors, side notes, pull quotes, and pages that stay alive as the width changes. That is when the layout engine stops being a measurement trick and starts becoming a medium.
+That is also why this text lands differently in a typographic setting than it does in a feed. On a page, the claims feel infrastructural rather than merely rhetorical. They sit there as objects to move around, compare, and return to. Even stripped to raw text, the argument keeps its essential mood: the world ahead may arrive through a long sequence of ordinary decisions, but the resulting change will not feel ordinary once it is here.
 `.trim().replace(/\s+/gu, ' ')
 
 type Rect = {
@@ -50,6 +50,7 @@ type ImageMask = {
 
 const stage = document.getElementById('stage') as HTMLDivElement
 const headline = document.getElementById('headline') as HTMLHeadingElement
+const credit = document.getElementById('credit') as HTMLParagraphElement
 const openaiLogo = document.getElementById('openai-logo') as HTMLImageElement
 const claudeLogo = document.getElementById('claude-logo') as HTMLImageElement
 
@@ -271,6 +272,10 @@ async function render(): Promise<void> {
   headline.style.left = `${gutter}px`
   headline.style.top = `${headlineTop}px`
   headline.style.width = `${headlineWidth}px`
+
+  credit.style.left = `${gutter + 4}px`
+  credit.style.top = `${copyTop - Math.round(Math.max(34, lineHeight * 1.8))}px`
+  credit.style.width = `${Math.round(Math.min(headlineWidth, pageWidth * 0.36))}px`
 
   openaiLogo.style.left = `${openaiRect.x}px`
   openaiLogo.style.top = `${openaiRect.y}px`
