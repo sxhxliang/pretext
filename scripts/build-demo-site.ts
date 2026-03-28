@@ -81,5 +81,5 @@ function rebaseRelativeAssetUrls(html: string, sourcePath: string, targetPath: s
 
 function rewriteDemoLinksForStaticRoot(html: string, targetRelativePath: string): string {
   if (targetRelativePath !== 'index.html') return html
-  return html.replace(/\bhref="\/demos\/([^"/]+)"/g, (_match, slug: string) => `href="./${slug}/index.html"`)
+  return html.replace(/\bhref="\/demos\/([^"/]+)"/g, (_match, slug: string) => `href="./${slug}"`)
 }

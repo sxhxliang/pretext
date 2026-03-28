@@ -44,9 +44,20 @@ const CREDIT_FONT = '12px "Helvetica Neue", Helvetica, Arial, sans-serif'
 const CREDIT_LINE_HEIGHT = 16
 const HEADLINE_TEXT = 'SITUATIONAL AWARENESS: THE DECADE AHEAD'
 const HEADLINE_FONT_FAMILY = '"Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif'
-const OPENAI_LOGO_SRC = openaiLogoUrl
-const CLAUDE_LOGO_SRC = claudeLogoUrl
 const HINT_PILL_SAFE_TOP = 72
+
+function resolveImportedAssetUrl(assetUrl: string): string {
+  if (/^(?:[a-z]+:)?\/\//i.test(assetUrl) || assetUrl.startsWith('data:') || assetUrl.startsWith('blob:')) {
+    return assetUrl
+  }
+  if (assetUrl.startsWith('/')) {
+    return new URL(assetUrl, window.location.origin).href
+  }
+  return new URL(assetUrl, import.meta.url).href
+}
+
+const OPENAI_LOGO_SRC = resolveImportedAssetUrl(openaiLogoUrl)
+const CLAUDE_LOGO_SRC = resolveImportedAssetUrl(claudeLogoUrl)
 
 type LogoKind = 'openai' | 'claude'
 type SpinState = {
