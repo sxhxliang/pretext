@@ -10,6 +10,7 @@ import {
   loadHashReport,
   type BrowserKind,
 } from './browser-automation.ts'
+import { startPostedReportServer } from './report-server.ts'
 
 type AccuracyMismatch = {
   label: string
@@ -127,86 +128,6 @@ async function startProxyServer(targetOrigin: string): Promise<{ baseUrl: string
   return { baseUrl: `http://127.0.0.1:${port}/accuracy`, server }
 }
 
-async function startReportServer(expectedRequestId: string): Promise<{
-  endpoint: string
-  waitForReport: (timeoutMs?: number) => Promise<AccuracyReport>
-  close: () => void
-}> {
-  const port = await getAvailablePort()
-  let resolveReport: ((report: AccuracyReport) => void) | null = null
-  let rejectReport: ((error: Error) => void) | null = null
-  const reportPromise = new Promise<AccuracyReport>((resolve, reject) => {
-    resolveReport = resolve
-    rejectReport = reject
-  })
-
-  const server = createHttpServer((req, res) => {
-    res.setHeader('access-control-allow-origin', '*')
-    if (req.method === 'OPTIONS') {
-      res.setHeader('access-control-allow-methods', 'POST, OPTIONS')
-      res.statusCode = 204
-      res.end()
-      return
-    }
-
-    if (req.method !== 'POST') {
-      res.statusCode = 404
-      res.end()
-      return
-    }
-
-    let body = ''
-    req.setEncoding('utf8')
-    req.on('data', chunk => {
-      body += chunk
-    })
-    req.on('end', () => {
-      try {
-        const report = JSON.parse(body) as AccuracyReport
-        if (report.requestId === expectedRequestId) {
-          resolveReport?.(report)
-        }
-        res.statusCode = 204
-        res.end()
-      } catch (error) {
-        res.statusCode = 400
-        res.end(error instanceof Error ? error.message : String(error))
-      }
-    })
-  })
-
-  await new Promise<void>((resolve, reject) => {
-    server.once('error', reject)
-    server.listen(port, '127.0.0.1', () => resolve())
-  })
-
-  return {
-    endpoint: `http://127.0.0.1:${port}/report`,
-    async waitForReport(timeoutMs = 120_000): Promise<AccuracyReport> {
-      return await new Promise<AccuracyReport>((resolve, reject) => {
-        const timer = setTimeout(() => {
-          reject(new Error('Timed out waiting for posted accuracy report'))
-        }, timeoutMs)
-
-        reportPromise.then(
-          report => {
-            clearTimeout(timer)
-            resolve(report)
-          },
-          error => {
-            clearTimeout(timer)
-            reject(error)
-          },
-        )
-      })
-    },
-    close() {
-      server.close()
-      rejectReport?.(new Error('Accuracy report server closed before report arrived'))
-    },
-  }
-}
-
 async function loadBrowserReport(url: string, expectedRequestId: string): Promise<AccuracyReport> {
   const session = createBrowserSession(browser)
   try {
@@ -291,7 +212,7 @@ try {
   let report: AccuracyReport
 
   if (usePostedReport) {
-    const reportServer = await startReportServer(requestId)
+    const reportServer = await startPostedReportServer<AccuracyReport>(requestId)
     try {
       const session = createBrowserSession(browser)
       try {

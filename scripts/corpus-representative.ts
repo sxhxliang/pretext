@@ -6,9 +6,9 @@ import {
   createBrowserSession,
   ensurePageServer,
   getAvailablePort,
-  loadHashReport,
   type BrowserKind,
 } from './browser-automation.ts'
+import { startPostedReportServer } from './report-server.ts'
 
 type CorpusSweepRow = {
   width: number
@@ -178,14 +178,23 @@ try {
 
       for (const corpusId of CORPUS_IDS) {
         const requestId = `${Date.now()}-${browser}-${corpusId}-${Math.random().toString(36).slice(2)}`
+        const reportServer = await startPostedReportServer<CorpusSweepReport>(requestId)
         const url =
           `${baseUrl}?id=${encodeURIComponent(corpusId)}` +
           `&widths=${encodeURIComponent(WIDTHS.join(','))}` +
           `&report=1` +
           `&diagnostic=light` +
-          `&requestId=${encodeURIComponent(requestId)}`
+          `&requestId=${encodeURIComponent(requestId)}` +
+          `&reportEndpoint=${encodeURIComponent(reportServer.endpoint)}`
 
-        const report = await loadHashReport<CorpusSweepReport>(session, url, requestId, browser, timeoutMs)
+        const report = await (async () => {
+          try {
+            await session.navigate(url)
+            return await reportServer.waitForReport(timeoutMs)
+          } finally {
+            reportServer.close()
+          }
+        })()
         if (report.status === 'error') {
           throw new Error(report.message ?? `Corpus report failed for ${corpusId}`)
         }

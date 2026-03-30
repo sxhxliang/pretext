@@ -5,9 +5,9 @@ import {
   createBrowserSession,
   ensurePageServer,
   getAvailablePort,
-  loadHashReport,
   type BrowserKind,
 } from './browser-automation.ts'
+import { startPostedReportServer } from './report-server.ts'
 
 type CorpusMeta = {
   id: string
@@ -259,7 +259,17 @@ try {
       `&requestId=${encodeURIComponent(requestId)}`
     url = appendOverrideParams(url, options)
 
-    const report = await loadHashReport<CorpusSweepReport>(session, url, requestId, options.browser, options.timeoutMs)
+    const reportServer = await startPostedReportServer<CorpusSweepReport>(requestId)
+    url += `&reportEndpoint=${encodeURIComponent(reportServer.endpoint)}`
+
+    const report = await (async () => {
+      try {
+        await session.navigate(url)
+        return await reportServer.waitForReport(options.timeoutMs)
+      } finally {
+        reportServer.close()
+      }
+    })()
     if (report.status === 'error') {
       throw new Error(`Corpus page returned error for ${meta.id}: ${report.message ?? 'unknown error'}`)
     }

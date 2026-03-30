@@ -210,6 +210,7 @@ const requestedFont = params.get('font')
 const requestedLineHeight = Number.parseInt(params.get('lineHeight') ?? '', 10)
 const requestedSliceStart = Number.parseInt(params.get('sliceStart') ?? '', 10)
 const requestedSliceEnd = Number.parseInt(params.get('sliceEnd') ?? '', 10)
+const reportEndpoint = params.get('reportEndpoint')
 const requestedWidths = parseWidthList(params.get('widths'))
 
 const diagnosticCanvas = document.createElement('canvas')
@@ -266,6 +267,12 @@ function parseWidthList(raw: string | null): number[] | null {
 
 function withRequestId<T extends CorpusReport>(report: T): CorpusReport {
   return requestId === undefined ? report : { ...report, requestId }
+}
+
+function toNavigationReport(report: CorpusReport): CorpusReport {
+  if (report.rows === undefined) return report
+  const { rows: _rows, ...navigationReport } = report
+  return navigationReport
 }
 
 function getEnvironmentFingerprint(): EnvironmentFingerprint {
@@ -593,7 +600,15 @@ function getFirstBreakMismatch(
 
 function setReport(report: CorpusReport): void {
   window.__CORPUS_REPORT__ = report
-  publishNavigationReport(report)
+  publishNavigationReport(toNavigationReport(report))
+  if (reportEndpoint !== null) {
+    void fetch(reportEndpoint, {
+      method: 'POST',
+      body: JSON.stringify(report),
+    }).catch(() => {
+      // Best-effort side channel for larger sweep reports.
+    })
+  }
 }
 
 function setError(message: string): void {
