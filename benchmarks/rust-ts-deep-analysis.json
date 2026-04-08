@@ -1,0 +1,1035 @@
+{
+  "generatedAt": "2026-03-30T12:30:47.807Z",
+  "totalRows": 108,
+  "lineCountMismatchRows": 0,
+  "lineTextMismatchRows": 55,
+  "cursorMismatchRows": 101,
+  "executionErrorRows": 0,
+  "patternSummary": {
+    "urlQueryBoundary": 9,
+    "cjkEmojiBoundary": 2,
+    "cursorStartSegmentDrift": 101
+  },
+  "rows": [
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 80,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 8,
+      "cursorMismatchCount": 11,
+      "firstLineTextDiff": "i=1, ts=\"界 👋🏽 \", rust=\"世界 👋🏽 \"",
+      "firstCursorDiff": "i=1, ts=(3,0)->(7,0), rust=(2,0)->(6,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 100,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 8,
+      "cursorMismatchCount": 10,
+      "firstLineTextDiff": "i=2, ts=\"https://ex\", rust=\"https://\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(5,0), rust=(0,0)->(4,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 120,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 8,
+      "cursorMismatchCount": 8,
+      "firstLineTextDiff": "i=0, ts=\"Hello 世界 \", rust=\"Hello 世界 👋🏽 \"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(5,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 140,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 5,
+      "cursorMismatchCount": 6,
+      "firstLineTextDiff": "i=1, ts=\"https://exampl\", rust=\"https://\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 160,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 5,
+      "cursorMismatchCount": 6,
+      "firstLineTextDiff": "i=1, ts=\"https://example.c\", rust=\"https://example.\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 180,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 4,
+      "cursorMismatchCount": 6,
+      "firstLineTextDiff": "i=2, ts=\"/path?\", rust=\"/path?q=alpha&lang=\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 200,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 4,
+      "cursorMismatchCount": 5,
+      "firstLineTextDiff": "i=1, ts=\"https://example.com/p\", rust=\"https://example.com/\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 220,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 4,
+      "firstLineTextDiff": "i=1, ts=\"https://example.com/pat\", rust=\"https://example.com/\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 240,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 4,
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 260,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 4,
+      "firstLineTextDiff": "i=1, ts=\"https://example.com/path?\", rust=\"https://example.com/path?q=\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 300,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 4,
+      "firstLineTextDiff": "i=1, ts=\"https://example.com/path?\", rust=\"https://example.com/path?q=alpha\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "mixed-app",
+      "mode": "normal",
+      "width": 320,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 4,
+      "firstLineTextDiff": "i=1, ts=\"https://example.com/path?\", rust=\"https://example.com/path?q=alpha&\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 80,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 2,
+      "firstCursorDiff": "i=0, ts=(0,0)->(0,8), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 100,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"قال،وقال؟\", rust=\"قال،وقال؟ث\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(1,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 120,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 2,
+      "firstCursorDiff": "i=0, ts=(0,0)->(3,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 140,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"قال،وقال؟ثم—\", rust=\"قال،وقال؟ثم—تا\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(3,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 160,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(1,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 180,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(1,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 200,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(1,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 220,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(1,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 240,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(1,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 260,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(1,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 300,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(1,0)"
+    },
+    {
+      "case": "arabic-punct",
+      "mode": "normal",
+      "width": 320,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(1,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 80,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 3,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم \", rust=\"قالّبكم \"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(3,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 100,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن \", rust=\"قالّبكم عن \"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 120,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن \", rust=\"قالّبكم عن \"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 140,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن \", rust=\"قالّبكم عن \"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 160,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 1,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن الفقرة\", rust=\"قالّبكم عن الفقرة\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 180,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 1,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن الفقرة\", rust=\"قالّبكم عن الفقرة\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 200,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 1,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن الفقرة\", rust=\"قالّبكم عن الفقرة\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 220,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 1,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن الفقرة\", rust=\"قالّبكم عن الفقرة\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 240,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 1,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن الفقرة\", rust=\"قالّبكم عن الفقرة\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 260,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 1,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن الفقرة\", rust=\"قالّبكم عن الفقرة\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 300,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 1,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن الفقرة\", rust=\"قالّبكم عن الفقرة\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "arabic-mark",
+      "mode": "normal",
+      "width": 320,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 1,
+      "cursorMismatchCount": 1,
+      "firstLineTextDiff": "i=0, ts=\"قال ّبكم عن الفقرة\", rust=\"قالّبكم عن الفقرة\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 80,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 6,
+      "cursorMismatchCount": 6,
+      "firstLineTextDiff": "i=0, ts=\"မြန်မာ\", rust=\"မြန်မာစာ\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(1,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 100,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 4,
+      "cursorMismatchCount": 4,
+      "firstLineTextDiff": "i=0, ts=\"မြန်မာစာ၊\", rust=\"မြန်မာစာ၊အ\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(2,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 120,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 4,
+      "cursorMismatchCount": 4,
+      "firstLineTextDiff": "i=0, ts=\"မြန်မာစာ၊\", rust=\"မြန်မာစာ၊အမှ\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(2,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 140,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 3,
+      "firstLineTextDiff": "i=0, ts=\"မြန်မာစာ၊\", rust=\"မြန်မာစာ၊အမှတ်\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(2,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 160,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 3,
+      "firstLineTextDiff": "i=0, ts=\"မြန်မာစာ၊\", rust=\"မြန်မာစာ၊အမှတ်အသ\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(2,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 180,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 2,
+      "firstCursorDiff": "i=0, ts=(0,0)->(3,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 200,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"မြန်မာစာ၊အမှတ်အသား\", rust=\"မြန်မာစာ၊အမှတ်အသားနှ\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(3,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 220,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"မြန်မာစာ၊အမှတ်အသား\", rust=\"မြန်မာစာ၊အမှတ်အသားနှင့\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(3,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 240,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"မြန်မာစာ၊အမှတ်အသားနှင့်\", rust=\"မြန်မာစာ၊အမှတ်အသားနှင့်စ\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 260,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"မြန်မာစာ၊အမှတ်အသားနှင့်\", rust=\"မြန်မာစာ၊အမှတ်အသားနှင့်စမ်း\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 300,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"မြန်မာစာ၊အမှတ်အသားနှင့်\", rust=\"မြန်မာစာ၊အမှတ်အသားနှင့်စမ်းသပ်မ\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "myanmar",
+      "mode": "normal",
+      "width": 320,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(5,0), rust=(0,0)->(1,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 80,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 5,
+      "firstLineTextDiff": "i=2, ts=\"日本語テキ\", rust=\"日本語テ\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 100,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 4,
+      "firstLineTextDiff": "i=2, ts=\"語テキスト\", rust=\"語テキスト（\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(5,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 120,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 4,
+      "firstLineTextDiff": "i=2, ts=\"キスト（テス\", rust=\"キスト（テスト）\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 140,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 3,
+      "firstCursorDiff": "i=0, ts=(0,0)->(7,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 160,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 3,
+      "firstCursorDiff": "i=0, ts=(0,0)->(8,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 180,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 2,
+      "firstCursorDiff": "i=0, ts=(0,0)->(9,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 200,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 2,
+      "firstCursorDiff": "i=0, ts=(0,0)->(10,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 220,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 2,
+      "firstCursorDiff": "i=0, ts=(0,0)->(11,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 240,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"漢字漢字、漢字漢字。日本語テキ\", rust=\"漢字漢字、漢字漢字。日本語テ\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(13,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 260,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 2,
+      "firstCursorDiff": "i=0, ts=(0,0)->(14,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 300,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"漢字漢字、漢字漢字。日本語テキスト\", rust=\"漢字漢字、漢字漢字。日本語テキスト（テ\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(15,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "cjk-kinsoku",
+      "mode": "normal",
+      "width": 320,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 2,
+      "firstCursorDiff": "i=0, ts=(0,0)->(17,0), rust=(0,0)->(0,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 80,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 5,
+      "firstCursorDiff": "i=4, ts=(8,0)->(11,0), rust=(8,0)->(10,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 100,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 3,
+      "firstLineTextDiff": "i=3, ts=\"🇺🇸🇨🇳 \", rust=\"🇺🇸🇨🇳 with \"",
+      "firstCursorDiff": "i=3, ts=(8,0)->(11,0), rust=(8,0)->(12,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 120,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 4,
+      "firstLineTextDiff": "i=1, ts=\"👨‍👩‍👧‍👦 \", rust=\"👨‍👩‍👧‍👦 and \"",
+      "firstCursorDiff": "i=1, ts=(2,0)->(4,0), rust=(2,0)->(6,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 140,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 5,
+      "cursorMismatchCount": 5,
+      "firstLineTextDiff": "i=0, ts=\"Family \", rust=\"Family 👨‍👩‍👧‍👦 \"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(2,0), rust=(0,0)->(4,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 160,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 3,
+      "firstCursorDiff": "i=1, ts=(4,0)->(11,0), rust=(4,0)->(10,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 180,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 3,
+      "firstLineTextDiff": "i=0, ts=\"Family 👨‍👩‍👧‍👦 \", rust=\"Family 👨‍👩‍👧‍👦 and \"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(6,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 200,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=1, ts=\"flags 🇺🇸🇨🇳 with \", rust=\"flags 🇺🇸🇨🇳 with text \"",
+      "firstCursorDiff": "i=1, ts=(6,0)->(13,0), rust=(6,0)->(14,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 220,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 3,
+      "firstLineTextDiff": "i=0, ts=\"Family 👨‍👩‍👧‍👦 and \", rust=\"Family 👨‍👩‍👧‍👦 and flags\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(7,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 240,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 3,
+      "firstLineTextDiff": "i=0, ts=\"Family 👨‍👩‍👧‍👦 and \", rust=\"Family 👨‍👩‍👧‍👦 and flags \"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(8,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 260,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=1, ts=(8,0)->(18,0), rust=(8,0)->(17,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 300,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"Family 👨‍👩‍👧‍👦 and flags \", rust=\"Family 👨‍👩‍👧‍👦 and flags 🇺🇸🇨🇳 \"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(8,0), rust=(0,0)->(10,0)"
+    },
+    {
+      "case": "emoji-zwj",
+      "mode": "normal",
+      "width": 320,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"Family 👨‍👩‍👧‍👦 and flags 🇺🇸🇨🇳 \", rust=\"Family 👨‍👩‍👧‍👦 and flags 🇺🇸🇨🇳 with \"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(11,0), rust=(0,0)->(12,0)"
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 80,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 5,
+      "cursorMismatchCount": 5,
+      "firstLineTextDiff": "i=1, ts=\"trans-at\", rust=\"trans-\"",
+      "firstCursorDiff": "i=1, ts=(2,0)->(4,2), rust=(2,0)->(4,0)"
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 100,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 4,
+      "cursorMismatchCount": 4,
+      "firstLineTextDiff": "i=0, ts=\"foo trans-a\", rust=\"foo trans-\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,1), rust=(0,0)->(4,0)"
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 120,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"foo trans-atl\", rust=\"foo trans-\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,3), rust=(0,0)->(4,0)"
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 140,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 3,
+      "firstLineTextDiff": "i=0, ts=\"foo trans-atlan\", rust=\"foo trans-\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,5), rust=(0,0)->(4,0)"
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 160,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 2,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"foo transatlantic \", rust=\"foo transatlantic\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 180,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 0
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 200,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 0
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 220,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 0
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 240,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 0
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 260,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 0
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 300,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 0
+    },
+    {
+      "case": "soft-hyphen",
+      "mode": "normal",
+      "width": 320,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 0
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 80,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=1, ts=(3,0)->(6,0), rust=(3,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 100,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=1, ts=(3,0)->(6,0), rust=(3,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 120,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=1, ts=(3,0)->(6,0), rust=(3,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 140,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 160,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 180,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 200,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 220,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 240,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 260,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 300,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-spaces",
+      "mode": "pre-wrap",
+      "width": 320,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 80,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 3,
+      "cursorMismatchCount": 2,
+      "firstLineTextDiff": "i=0, ts=\"A\\tB\\t\", rust=\"A\\tB\\tC\"",
+      "firstCursorDiff": "i=0, ts=(0,0)->(4,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 100,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 120,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 140,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 160,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 180,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 200,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 220,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 240,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 260,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 300,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    },
+    {
+      "case": "pre-wrap-tabs",
+      "mode": "pre-wrap",
+      "width": 320,
+      "lineCountDelta": 0,
+      "lineTextMismatchCount": 0,
+      "cursorMismatchCount": 1,
+      "firstCursorDiff": "i=0, ts=(0,0)->(6,0), rust=(0,0)->(5,0)"
+    }
+  ]
+}

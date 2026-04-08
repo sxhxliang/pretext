@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-03-30T11:16:54.351Z",
+  "mode": "normal",
+  "iterations": 20000,
+  "width": 320,
+  "textLength": 1296,
+  "ts": {
+    "engine": "typescript",
+    "nsPerIter": 1629846.1433499998,
+    "checksum": 980000
+  },
+  "rust": {
+    "engine": "rust",
+    "nsPerIter": 198638.78,
+    "checksum": 980000
+  },
+  "speedup": 8.205075279610556
+}
